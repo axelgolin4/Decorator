@@ -1,32 +1,26 @@
-import velocity as velocity
-
 from fighter import Fighter
 
 
-class Rick:
+class MrPoopyButtHole(Fighter):
     def __init__(self):
-        self.hp: float = 450
-        self.defence: float = 200
-        self.attack: float = 125
-        self.velocity: float = 125
+        self.hp: float = 300
+        self.defence: float = 300
+        self.attack: float = 35
+        self.velocity: float = 350
 
-    def get_hp(self):
-        return self.hp
+    def get_hp(self) -> str:
+        life = f"Vida: {self.hp}"
+        return life
 
-    def get_attack(self):
+    def get_def(self) -> str:
+        defence_life = f"Escudo: {self.defence}"
+        return defence_life
+
+    def get_velocity(self) -> str:
+        velocity_capacity = f"Velocidad: {self.velocity}"
+        return velocity_capacity
+
+    def take_damage(self) -> float:
         return self.attack
-
-    def get_def(self):
-        return self.defence
-
-    def get_velocity(self):
-        return self.velocity
-
-    def reduce_hp(self):
-        damage = self.attack
-        return damage
-
-    def compute_damage(enemy: Fighter):
-        pass
 
 
